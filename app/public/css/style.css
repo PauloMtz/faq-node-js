@@ -1,0 +1,22 @@
+body {
+  background-color: #eceff1;
+}
+
+#formulario-pergunta {
+  margin-top: 5vh;
+}
+
+.titulo,
+#enviar_pergunta {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+#navbarNavDropdown {
+  margin-left: 40px;
+}
+
+#linha,
+#titulo_detalhes {
+  margin-top: 20px;
+}

@@ -1,0 +1,32 @@
+<%- include ('partials/header.ejs') %>
+<body>
+  <%- include ('partials/navbar.ejs') %>
+  <div class="container">
+    <h1 id="titulo_detalhes"><%= pergunta_view.titulo_banco %></h1>
+    <p><%= pergunta_view.descricao_banco %></p>
+    <hr />
+    <form method="POST" action="/enviar_resposta">
+      <h3>Adicionar resposta</h3>
+      <textarea
+        placeholder="Digite sua resposta..."
+        class="form-control"
+        name="corpo"
+      ></textarea
+      ><br />
+      <input type="hidden" name="pergunta" value="<%= pergunta_view.id %>" />
+      <button type="submit" class="btn btn-primary">Enviar resposta</button>
+    </form>
+    <hr />
+    <h3>Respostas</h3>
+    <hr />
+    <% respostas_view.forEach(resposta => {%>
+    <br />
+    <div class="card">
+      <div class="card-body">
+        <p><%= resposta.corpo_banco %></p>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</body>
+<%- include ('partials/footer.ejs') %>
